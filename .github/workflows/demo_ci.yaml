@@ -47,7 +47,7 @@ jobs:
           # # You can access secrets here as well from Github Secrets
           # SOME_SECRET: ${{ secrets.SOME_SECRET }}
         run: |
-          sudo apt-get -yqq install libpq-dev
+          sudo apt-get install -y apt-utils
           gem install bundler
           bundle install --jobs 4 --retry 4
           bundle exec rake
