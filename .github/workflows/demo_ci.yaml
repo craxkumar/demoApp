@@ -41,7 +41,7 @@ jobs:
           
       - name: Build and Run Tests
         env:
-          RAILS_ENV: development
+          RAILS_ENV: test
           # DATABASE_URL: "postgres://rails:password@localhost:5432/rails_test"
           # REDIS_URL: redis://localhost:6379/0
           # # You can access secrets here as well from Github Secrets
@@ -50,5 +50,5 @@ jobs:
           sudo apt-get -yqq install libpq-dev
           gem install bundler
           bundle install --jobs 4 --retry 4
-          bundle exec rspec
+          bundle exec "rspec spec"
           
